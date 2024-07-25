@@ -10,7 +10,7 @@ public class LastOccurrence {
     }
 
 //    Q. Index of Last Occurrence in Sorted
-    static int lastOccurrence(int[] arr, int target){
+    public static int lastOccurrence(int[] arr, int target){
         int start = 0;
         int end = arr.length-1;
         int ans = -1;

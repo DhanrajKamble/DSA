@@ -10,7 +10,7 @@ public class FirstOccurrencs {
     }
 
 //    Q. Index of first occurrence in Sorted
-    static int firstOccurrence(int[] arr, int target){
+    public static int firstOccurrence(int[] arr, int target){
         int start = 0;
         int end = arr.length-1;
 
