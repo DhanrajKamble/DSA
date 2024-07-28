@@ -4,7 +4,7 @@ public class SearchInInfinite {
 
     public static void main(String[] args) {
         int [] arr = {1, 10, 15, 20, 40, 80, 90, 100, 120, 500, 510, 520, 530, 540, 550, 560, 570, 580, 590, 600, 610, 620, 630, 640, 650};
-        int target = 530;
+        int target = 50;
 
 //        Extream elements code will not work
 //        int target = 630;
@@ -14,7 +14,7 @@ public class SearchInInfinite {
     }
 
 //      Q. Search in Infinite sized Array works only for -->Extreamly left elements.
-//      Or else we can make a data structure to store Length variable and by using the length variable we can do binary search
+//      Or else we can make a data structure to store Length variable and by using the length variable we can do binary search (example like ArrayList)
     static int searchInfinite(int[] arr, int target){
         int start = 0;
         int end = 1;
@@ -31,6 +31,8 @@ public class SearchInInfinite {
                 if(myAns != -1 && arr[myAns] == target){
                     return myAns;
                 }
+                if(arr[myAns] > target)
+                    return -1;
             }
         }
         return -1;
@@ -49,6 +51,7 @@ public class SearchInInfinite {
                 end = mid - 1;
             }
         }
+        if(arr[start] > target) return end;
         return -1;
     }
 }
